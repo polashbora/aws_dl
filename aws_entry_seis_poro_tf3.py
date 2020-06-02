@@ -19,8 +19,9 @@ def model(x_train, y_train, x_test, y_test):
                   optimizer=optimizer,
                   metrics=['mae', 'mse'])
     EPOCHS=10
-    model.fit(x_train, y_train, epochs=EPOCHS, validation_split = 0.2, verbose=0)
-    print("Model has been trained")
+    model.fit(x_train, y_train, epochs=EPOCHS, validation_split = 0.3, verbose=0)
+    results=model.predict(x_test)
+    print("Model has been trained\n\n")
     return model
 
 
